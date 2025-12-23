@@ -7,7 +7,7 @@ function App() {
   const [category, setCategory] = useState(`inspirational`)
 
   const fetchQuote = async (category) => {
-    const response = await fetch(`https://api.quotable.io/random?tags=${category}`)
+    const response = await fetch(`http://api.quotable.io/random?tags=${category}`)
     const data = await response.json()
     setQuote(data)
   }
