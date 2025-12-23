@@ -1,5 +1,3 @@
-import React from "react"
-
 export default function QuoteBox(properties) {
     return (
         <div className="quote-box">
