@@ -8,7 +8,7 @@ export default function CategorySelector(properties) {
             try {
                 const response = await fetch(`http://api.quotable.io/tags`)
                 const data = await response.json()
-                setTags(data || [])
+                setTags(data.filter(tag => tag.quoteCount > 1))
             } catch (error) {
                 console.error(`Failed to fetch tags:`, error)
                 setTags([])
