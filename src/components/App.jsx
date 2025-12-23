@@ -1,6 +1,7 @@
 import React from "react"
 import QuoteBox from "./QuoteBox.jsx"
 import CategorySelector from "./CategorySelector.jsx"
+import "../App.css"
 
 function App() {
   const [quote, setQuote] = React.useState({})

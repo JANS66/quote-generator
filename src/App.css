@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 700px;
+    padding: 2rem;
+    background: #1f1f1f;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.App:hover {
+    transform: translateY((-4px));
+    box-shadow: 0 12px 32px rgba(0,0,0,0.7);
+}
+
+.quote-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2a2a2a;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative;
+    width: 100%;
+}
+
+.quote-box p {
+    margin-bottom: 1rem;
+}
+
+.quote-box p:last-child {
+    font-size: 1rem;
+    font-style: italic;
+    color: #bbbbbb;
+}
+
+select {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background: #333;
+    color: #e0e0e0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+select:hover {
+    background: #444;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    background: #6200ea;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #7e3ff2;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 480px) {
+    .App {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .quote-box {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    button, select {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .App {
+        padding: 1.5rem;
+    }
+
+    .quote-box {
+        font-size: 1.1rem;
+        padding: 1.25rem 1.5rem;
+    }
+
+    button, select {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .App {
+        padding: 2rem;
+    }
+
+    .quote-box {
+        font-size: 1.2rem;
+        padding: 1.5rem 2rem;
+    }
+
+    button, select {
+        font-size: 1.05rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .App {
+        max-width: 700px;
+    }
+
+    .quote-box {
+        font-size: 1.25rem;
+    }
+
+    button, select {
+        font-size: 1.1rem;
+    }
+}
