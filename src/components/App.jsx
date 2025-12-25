@@ -9,13 +9,13 @@ function App() {
 
   const fetchQuote = async (category) => {
     try {
-      const response = await fetch(`http://api.quotable.io/random?tags=${category}`)
+      const response = await fetch(`https://api.quotable.io/random?tags=${category}`)
       if (!response.ok) throw new Error(`No quote for this tag`)
       const data = await response.json()
       setQuote(data)
     } catch (error) {
       console.warn(error)
-      const fallback = await fetch(`http://api.quotable.io/random`)
+      const fallback = await fetch(`https://api.quotable.io/random`)
       const data = await fallback.json()
       setQuote(data)
     }

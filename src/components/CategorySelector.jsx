@@ -6,7 +6,7 @@ export default function CategorySelector(properties) {
     React.useEffect(() => {
         const fetchTags = async () => {
             try {
-                const response = await fetch(`http://api.quotable.io/tags`)
+                const response = await fetch(`https://api.quotable.io/tags`)
                 const data = await response.json()
                 setTags(data.filter(tag => tag.quoteCount > 1))
             } catch (error) {
